@@ -101,6 +101,15 @@ section#products,section#fittings,section#reviews{background:var(--alt);box-shad
 .meta-box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:19px}
 .meta-box b{display:block;font-family:var(--fd);font-weight:700;font-size:19px;text-transform:uppercase;margin-bottom:3px}
 .meta-box span{color:var(--muted);font-size:14.5px}
+/* ---------- fabrication ---------- */
+.fab-block{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px 32px;margin-top:14px}
+.fab-block h3{font-size:25px;margin:0 0 5px;text-transform:uppercase;font-weight:700}
+.fab-block .fab-intro{color:var(--muted);margin:0 0 17px;font-size:15.5px;max-width:46em}
+.fab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:11px}
+.fab-item{border:1px solid var(--line);border-radius:8px;padding:14px 15px}
+.fab-item b{display:block;font-family:var(--fd);font-weight:700;font-size:16px;line-height:1.3}
+.fab-item b::before{content:"";display:inline-block;width:8px;height:8px;background:var(--accent);margin-right:9px}
+.fab-item span{color:var(--muted);font-size:14px;display:block;margin-top:3px}
 /* ---------- product overview cards ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:17px}
 .pcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:box-shadow .22s ease}
@@ -209,7 +218,7 @@ footer a{color:#fff}
   .hpl-hero,.two-col,.contact-grid{grid-template-columns:1fr}
   .quicknav{top:65px}
   section{padding-top:56px}
-  .about-card{padding:24px}
+  .about-card,.fab-block{padding:24px}
   .detail{padding:22px}
   .review-summary .score{font-size:56px}
 }
@@ -299,10 +308,24 @@ footer a{color:#fff}
     <p>At Sri Mahaveer Metals, we don't just supply products—we build lasting partnerships through quality, trust, innovation, and excellence.</p>
   </div>
   <div class="about-meta">
-    <div class="meta-box"><b>Steel Fabricator</b><span>Google-listed category — Bengaluru, Karnataka, with customised fabrication for construction needs.</span><span style="display:block;margin-top:8px;font-weight:700;color:var(--ink)">Fabrication by Sahjad</span></div>
+    <div class="meta-box"><b>Steel Fabricator</b><span>Google-listed category — Bengaluru, Karnataka, with customised fabrication for construction needs.</span></div>
     <div class="meta-box"><b>Dealers In</b><span>Jindal SS Pipes &amp; ThunderX Laminate Sheets, SS angle, rod and all SS fitting items.</span></div>
     <div class="meta-box"><b>Who We Serve</b><span>Architects, interior designers, fabricators, contractors, builders and retailers.</span></div>
     <div class="meta-box"><b>GSTIN</b><span>29AWHPS9852R2Z3</span></div>
+  </div>
+  <div class="fab-block">
+    <h3>Fabrication by Sahjad</h3>
+    <p class="fab-intro">All types of stainless steel fabrication work done to order — made to your size and design, with neat finishing.</p>
+    <div class="fab-grid">
+      <div class="fab-item"><b>Stainless Steel Railings</b><span>Staircase, balcony &amp; terrace railings — with balusters &amp; fittings.</span></div>
+      <div class="fab-item"><b>SS Main Gates &amp; HPL Sheet Gates</b><span>Strong, stylish entry gates in stainless steel and HPL sheet designs.</span></div>
+      <div class="fab-item"><b>Window Grills &amp; Safety Grills</b><span>Secure grills for windows, balconies and ventilators.</span></div>
+      <div class="fab-item"><b>SS Doors &amp; Door Frames</b><span>Durable stainless steel doors and frames for homes and commercial spaces.</span></div>
+      <div class="fab-item"><b>SS Furniture</b><span>Tables, chairs, stools &amp; counters — built to last.</span></div>
+      <div class="fab-item"><b>Kitchen &amp; Commercial SS Work</b><span>Counters, shelves &amp; trolleys for kitchens, hotels and shops.</span></div>
+      <div class="fab-item"><b>HPL Cladding Work</b><span>Facade, balcony panelling &amp; fences in 6 mm HPL sheets.</span></div>
+      <div class="fab-item"><b>Custom Fabrication</b><span>Cutting, bending, welding &amp; polishing / buffing finishing — made to size &amp; design.</span></div>
+    </div>
   </div>
 </section>
 
@@ -438,6 +461,7 @@ footer a{color:#fff}
     <p style="margin:10px 0 2px">12, 4th Cross Rd, Kalasipalyam New Extension, Bengaluru, Karnataka 560002 • GSTIN: 29AWHPS9852R2Z3</p>
     <p style="margin:2px 0">Call: <a href="tel:+919448709657">+91 94487 09657</a> • <a href="tel:+917760209657">+91 77602 09657</a> • <a href="tel:+919187439657">+91 91874 39657</a></p>
     <p style="margin:14px 0 0;font-size:13.5px;color:#8f979f">Manufacturers &amp; dealers in: Stainless Steel Pipes, Rod, Flat, Angle and all SS fitting items • ThunderX Laminate Sheets &amp; Jindal SS Pipes available.</p>
+    <p style="margin:12px 0 0;font-size:13px;color:#8f979f">Website Designer: Sahjad</p>
   </div>
 </footer>
 
@@ -449,7 +473,7 @@ footer a{color:#fff}
 <script>
 (function(){
   if(!('IntersectionObserver' in window)) return;
-  var els = document.querySelectorAll('.gcard, .detail, .pcard, .review, .about-card, .meta-box, .contact-card, .review-summary, details.acc, .feat, .trust-item');
+  var els = document.querySelectorAll('.gcard, .detail, .pcard, .review, .about-card, .meta-box, .fab-block, .contact-card, .review-summary, details.acc, .feat, .trust-item');
   els.forEach(function(el){ el.classList.add('rv'); });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
